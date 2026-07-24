@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Rupesh Narayan</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Rupesh Narayan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Jul 2026 11:46:30 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenSnitch</title>
+      <link>http://localhost:1313/posts/opensnitch/</link>
+      <pubDate>Fri, 24 Jul 2026 11:46:30 +0530</pubDate>
+      <guid>http://localhost:1313/posts/opensnitch/</guid>
+      <description>&lt;p&gt;As I was reading about Nftables and eBPF, I thought struck in my mind that there are firewall rules to block/control incoming
+connections. You can install Gufw which is a graphical frontend to ufw. By clicking a button, you can deny all unauthorized
+incoming connections. Yes, you can control outgoing connections too but for that you have to create manual rules and it is
+not as easy as it sounds. Wouldn&amp;rsquo;t it be great if I can view each outgoing connection on connection to connection basis.
+As I was reading about eBPF and Linux network programming, so I knew that for each connection a socket is created and if I am
+able to hook into kernel functions responsible for socket creation I would be able to intercept and see every outbound connection.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
