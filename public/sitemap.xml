@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://avid-programmer.github.io/posts/openwrt/</loc>
+    <lastmod>2026-09-23T14:40:27+05:30</lastmod>
+  </url><url>
+    <loc>https://avid-programmer.github.io/posts/</loc>
+    <lastmod>2026-09-23T14:40:27+05:30</lastmod>
+  </url><url>
+    <loc>https://avid-programmer.github.io/</loc>
+    <lastmod>2026-09-23T14:40:27+05:30</lastmod>
+  </url><url>
+    <loc>https://avid-programmer.github.io/posts/opensnitch/</loc>
+    <lastmod>2026-07-24T11:46:30+05:30</lastmod>
+  </url><url>
+    <loc>https://avid-programmer.github.io/about/</loc>
+  </url><url>
+    <loc>https://avid-programmer.github.io/categories/</loc>
+  </url><url>
+    <loc>https://avid-programmer.github.io/tags/</loc>
+  </url>
+</urlset>

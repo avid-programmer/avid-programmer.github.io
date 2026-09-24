@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>OpenWrt | Rupesh Narayan</title>
+<meta name="keywords" content="">
+<meta name="description" content="Lately, I was learning about OpenWrt and read few tutorials and documentation on it. Now, I am going to tell you how you can install
+it in Virt-manager (which is a graphical frontend to manage QEMU virtual machines through libvirt).
+Downloading image:
+Go to the Downloads section of OpenWrt website.
+
+Select the &lsquo;Stable Release&rsquo;.
+Now, select x86 at the bottom of the page.
+Finally, select 64/.
+
+Here, you will see a bunch of image files for x86-64 architecture.
+Let us go through each of the files:">
+<meta name="author" content="">
+<link rel="canonical" href="https://avid-programmer.github.io/posts/openwrt/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.cd9298b33628769aa1bc1acebbbfd7aa11ce81dfe03484d479e1907760249a1d.css" integrity="sha256-zZKYszYodpqhvBrOu7/XqhHOgd/gNITUeeGQd2Akmh0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://avid-programmer.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://avid-programmer.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://avid-programmer.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://avid-programmer.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://avid-programmer.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://avid-programmer.github.io/posts/openwrt/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><meta property="og:url" content="https://avid-programmer.github.io/posts/openwrt/">
+  <meta property="og:site_name" content="Rupesh Narayan">
+  <meta property="og:title" content="OpenWrt">
+  <meta property="og:description" content="Lately, I was learning about OpenWrt and read few tutorials and documentation on it. Now, I am going to tell you how you can install it in Virt-manager (which is a graphical frontend to manage QEMU virtual machines through libvirt).
+Downloading image: Go to the Downloads section of OpenWrt website.
+Select the ‘Stable Release’. Now, select x86 at the bottom of the page. Finally, select 64/. Here, you will see a bunch of image files for x86-64 architecture. Let us go through each of the files:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-09-23T14:40:27+05:30">
+    <meta property="article:modified_time" content="2026-09-23T14:40:27+05:30">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="OpenWrt">
+  <meta name="twitter:description" content="Lately, I was learning about OpenWrt and read few tutorials and documentation on it. Now, I am going to tell you how you can install it in Virt-manager (which is a graphical frontend to manage QEMU virtual machines through libvirt).
+Downloading image: Go to the Downloads section of OpenWrt website.
+Select the ‘Stable Release’. Now, select x86 at the bottom of the page. Finally, select 64/. Here, you will see a bunch of image files for x86-64 architecture. Let us go through each of the files:">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://avid-programmer.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "OpenWrt",
+      "item": "https://avid-programmer.github.io/posts/openwrt/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "OpenWrt",
+  "name": "OpenWrt",
+  "description": "Lately, I was learning about OpenWrt and read few tutorials and documentation on it. Now, I am going to tell you how you can install it in Virt-manager (which is a graphical frontend to manage QEMU virtual machines through libvirt).\nDownloading image: Go to the Downloads section of OpenWrt website.\nSelect the \u0026lsquo;Stable Release\u0026rsquo;. Now, select x86 at the bottom of the page. Finally, select 64/. Here, you will see a bunch of image files for x86-64 architecture. Let us go through each of the files:\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "Lately, I was learning about OpenWrt and read few tutorials and documentation on it. Now, I am going to tell you how you can install it in Virt-manager (which is a graphical frontend to manage QEMU virtual machines through libvirt).\nDownloading image: Go to the Downloads section of OpenWrt website.\nSelect the ‘Stable Release’. Now, select x86 at the bottom of the page. Finally, select 64/. Here, you will see a bunch of image files for x86-64 architecture. Let us go through each of the files:\nefi image files : Files containing efi in their name is used for systems that use UEFI for boot process.\nrootfs image files : Files containing rootfs in their name contain only the filesystem and OS, but no bootloader and no kernel.\ngeneric-kernel.bin : This file only contains raw Linux kernel and nothing else.\nsquashfs : Files containing squashfs in their name contain read only filesystem. Typically, used for flashing physical home routers.\ncombined : Files containing combined in their name contain full disk image.\nWe will use generic-ext4-combined.img.gz\nNow, we have to unzip this file to extract the image file.\ngunzip generic-ext4-combined.img.gz Creating isolated network: Open Virt-manager.\nSelect QEMU/KVM. Then, Edit –\u003e Connection Details.\nSelect Virtual Networks.\nClick on + symbol at the bottom.\nFill in the details as follows\nName: my-lan\nMode: Isolated\nIPv4 Configuration: Uncheck Enable IPv4\nIPv6 Configuration: Uncheck Enable IPv6\nInstalling OpenWrt: Open Virt-manager.\nClick on “Create a new virtual machine”.\nSelect “Import existing disk image”.\nProvide the path where you unzip the file. And in the operating system choose “Generic Linux 2024”.\nChoose Memory and CPU.\nCheck “Customize configuration before install”. Click on “Finish”.\nCustomizing configuration before install:\nSelect NIC from the left side. Go to Network Source and select ‘my-lan’. Click on ‘Add Hardware’. Now, click on ‘Network’ and then Network Source as ‘default’: NAT. Click on ‘Finish’. Click on ‘Begin Installation’. Modifying OpenWrt VM: Open the OpenWrt VM.\nEdit the file /etc/config/network using vi.\nModify the block starting with config interface 'lan'\nChange list ipaddr '192.168.1.1/24' to list ipaddr '10.0.0.1/24'\nRun /etc/init.d/network restart\nCreating a network: Install Linux Mint in another VM.\nOpen the Linux Mint VM but do not start it.\nClick on the light bulb icon.\nSelect NIC on right side and then in ‘Network source:’ select ‘my-lan’.\nNow, first start the OpenWrt VM. Once it is successfully booted, start Linux Mint VM.\nNow, all your traffic from Linux Mint VM, will be routed through OpenWrt VM.\n",
+  "wordCount" : "413",
+  "inLanguage": "en",
+  "datePublished": "2026-09-23T14:40:27+05:30",
+  "dateModified": "2026-09-23T14:40:27+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://avid-programmer.github.io/posts/openwrt/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rupesh Narayan",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://avid-programmer.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="header-nav">
+        <div class="logo">
+            <a href="https://avid-programmer.github.io/" accesskey="h" title="Rupesh Narayan (Alt + H)">Rupesh Narayan</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu" class="menu">
+            <li>
+                <a href="https://avid-programmer.github.io/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      OpenWrt
+    </h1>
+    <div class="post-meta">
+
+<span title='2026-09-23 14:40:27 +0530 IST'>September 23, 2026</span>&nbsp;·&nbsp;<span>2 min</span>
+
+</div>
+  </header> <details class="toc" >
+    <summary accesskey="c" title="(Alt + C)">
+        <span class="title">Table of Contents</span>
+    </summary>
+
+    <div class="inner"><ul>
+            <li>
+                <a href="#downloading-image" aria-label="Downloading image:">Downloading image:</a></li>
+            <li>
+                <a href="#creating-isolated-network" aria-label="Creating isolated network:">Creating isolated network:</a></li>
+            <li>
+                <a href="#installing-openwrt" aria-label="Installing OpenWrt:">Installing OpenWrt:</a></li>
+            <li>
+                <a href="#modifying-openwrt-vm" aria-label="Modifying OpenWrt VM:">Modifying OpenWrt VM:</a></li>
+            <li>
+                <a href="#creating-a-network" aria-label="Creating a network:">Creating a network:</a>
+            </li>
+        </ul>
+    </div>
+</details>
+
+  <div class="post-content md-content"><p>Lately, I was learning about OpenWrt and read few tutorials and documentation on it. Now, I am going to tell you how you can install
+it in Virt-manager (which is a graphical frontend to manage QEMU virtual machines through libvirt).</p>
+<h3 id="downloading-image">Downloading image:<a hidden class="anchor" aria-hidden="true" href="#downloading-image">#</a></h3>
+<p>Go to the Downloads section of <a href="https://downloads.openwrt.org">OpenWrt</a> website.</p>
+<ul>
+<li>Select the &lsquo;Stable Release&rsquo;.</li>
+<li>Now, select x86 at the bottom of the page.</li>
+<li>Finally, select 64/.</li>
+</ul>
+<p>Here, you will see a bunch of image files for x86-64 architecture.
+Let us go through each of the files:</p>
+<ul>
+<li>
+<p>efi image files : Files containing efi in their name is used for systems that use UEFI for boot process.</p>
+</li>
+<li>
+<p>rootfs image files : Files containing rootfs in their name contain only the filesystem and OS, but no bootloader and no kernel.</p>
+</li>
+<li>
+<p>generic-kernel.bin : This file only contains raw Linux kernel and nothing else.</p>
+</li>
+<li>
+<p>squashfs : Files containing squashfs in their name contain read only filesystem. Typically, used for flashing physical home routers.</p>
+</li>
+<li>
+<p>combined : Files containing combined in their name contain full disk image.</p>
+<p><img loading="lazy" src="/posts/openwrt/image-download.png"></p>
+</li>
+</ul>
+<p>We will use <code>generic-ext4-combined.img.gz</code></p>
+<p>Now, we have to unzip this file to extract the image file.</p>
+<pre tabindex="0"><code>gunzip generic-ext4-combined.img.gz 
+</code></pre><h3 id="creating-isolated-network">Creating isolated network:<a hidden class="anchor" aria-hidden="true" href="#creating-isolated-network">#</a></h3>
+<p>Open Virt-manager.</p>
+<ul>
+<li>
+<p>Select <strong>QEMU/KVM</strong>. Then, <strong>Edit</strong> &ndash;&gt; <strong>Connection Details</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Virtual Networks</strong>.</p>
+</li>
+<li>
+<p>Click on <strong>+</strong> symbol at the bottom.</p>
+<p><img loading="lazy" src="/posts/openwrt/download.png"></p>
+</li>
+<li>
+<p>Fill in the details as follows<br>
+<strong>Name</strong>: my-lan<br>
+<strong>Mode</strong>: Isolated<br>
+<strong>IPv4 Configuration</strong>: Uncheck Enable IPv4<br>
+<strong>IPv6 Configuration</strong>: Uncheck Enable IPv6</p>
+<p><img loading="lazy" src="/posts/openwrt/mode.png"></p>
+</li>
+</ul>
+<h3 id="installing-openwrt">Installing OpenWrt:<a hidden class="anchor" aria-hidden="true" href="#installing-openwrt">#</a></h3>
+<p>Open <strong>Virt-manager</strong>.</p>
+<ul>
+<li>
+<p>Click on &ldquo;Create a new virtual machine&rdquo;.</p>
+<p><img loading="lazy" src="/posts/openwrt/openwrt-1.png"></p>
+</li>
+<li>
+<p>Select &ldquo;Import existing disk image&rdquo;.</p>
+</li>
+<li>
+<p>Provide the path where you unzip the file. And in the operating system choose &ldquo;Generic Linux 2024&rdquo;.</p>
+</li>
+<li>
+<p>Choose Memory and CPU.</p>
+</li>
+<li>
+<p>Check &ldquo;Customize configuration before install&rdquo;. Click on &ldquo;Finish&rdquo;.</p>
+<p><img loading="lazy" src="/posts/openwrt/last-step.png"></p>
+</li>
+</ul>
+<p><strong>Customizing configuration before install</strong>:</p>
+<ul>
+<li>Select NIC from the left side.
+<ul>
+<li>Go to <strong>Network Source</strong> and select &lsquo;my-lan&rsquo;.</li>
+</ul>
+</li>
+<li>Click on &lsquo;Add Hardware&rsquo;.</li>
+<li>Now, click on &lsquo;Network&rsquo; and then <strong>Network Source</strong> as &lsquo;default&rsquo;: NAT.</li>
+<li>Click on &lsquo;Finish&rsquo;.</li>
+</ul>
+<p><img loading="lazy" src="/posts/openwrt/begin-installation.png"></p>
+<ul>
+<li>Click on &lsquo;Begin Installation&rsquo;.</li>
+</ul>
+<h3 id="modifying-openwrt-vm">Modifying OpenWrt VM:<a hidden class="anchor" aria-hidden="true" href="#modifying-openwrt-vm">#</a></h3>
+<ul>
+<li>
+<p>Open the OpenWrt VM.</p>
+</li>
+<li>
+<p>Edit the file <code>/etc/config/network</code> using vi.</p>
+</li>
+<li>
+<p>Modify the block starting with <code>config interface 'lan'</code></p>
+<ul>
+<li>
+<p>Change <code>list ipaddr '192.168.1.1/24'</code> to <code>list ipaddr '10.0.0.1/24'</code></p>
+</li>
+<li>
+<p>Run <code>/etc/init.d/network restart</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="creating-a-network">Creating a network:<a hidden class="anchor" aria-hidden="true" href="#creating-a-network">#</a></h3>
+<ul>
+<li>
+<p>Install Linux Mint in another VM.</p>
+</li>
+<li>
+<p>Open the Linux Mint VM but do not start it.</p>
+</li>
+<li>
+<p>Click on the light bulb icon.</p>
+</li>
+</ul>
+<p><img loading="lazy" src="/posts/openwrt/last-image.png"></p>
+<ul>
+<li>
+<p>Select <strong>NIC</strong> on right side and then in &lsquo;Network source:&rsquo; select &lsquo;my-lan&rsquo;.</p>
+</li>
+<li>
+<p>Now, first start the OpenWrt VM. Once it is successfully booted, start Linux Mint VM.</p>
+</li>
+<li>
+<p>Now, all your traffic from Linux Mint VM, will be routed through OpenWrt VM.</p>
+</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<a href="#top" id="top-link" class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up">
+        <polyline points="17 11 12 6 7 11"></polyline>
+        <polyline points="17 18 12 13 7 18"></polyline>
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var toplink = document.getElementById("top-link");
+    window.onscroll = function () {
+        const scrollThreshold = window.innerHeight;
+        if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
+            toplink.classList.remove("hidden");
+        } else {
+            toplink.classList.add("hidden");
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

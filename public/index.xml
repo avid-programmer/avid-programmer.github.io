@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rupesh Narayan</title>
+    <link>https://avid-programmer.github.io/</link>
+    <description>Recent content on Rupesh Narayan</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Sep 2026 14:40:27 +0530</lastBuildDate>
+    <atom:link href="https://avid-programmer.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenWrt</title>
+      <link>https://avid-programmer.github.io/posts/openwrt/</link>
+      <pubDate>Wed, 23 Sep 2026 14:40:27 +0530</pubDate>
+      <guid>https://avid-programmer.github.io/posts/openwrt/</guid>
+      <description>&lt;p&gt;Lately, I was learning about OpenWrt and read few tutorials and documentation on it. Now, I am going to tell you how you can install
+it in Virt-manager (which is a graphical frontend to manage QEMU virtual machines through libvirt).&lt;/p&gt;
+&lt;h3 id=&#34;downloading-image&#34;&gt;Downloading image:&lt;/h3&gt;
+&lt;p&gt;Go to the Downloads section of &lt;a href=&#34;https://downloads.openwrt.org&#34;&gt;OpenWrt&lt;/a&gt; website.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select the &amp;lsquo;Stable Release&amp;rsquo;.&lt;/li&gt;
+&lt;li&gt;Now, select x86 at the bottom of the page.&lt;/li&gt;
+&lt;li&gt;Finally, select 64/.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here, you will see a bunch of image files for x86-64 architecture.
+Let us go through each of the files:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenSnitch</title>
+      <link>https://avid-programmer.github.io/posts/opensnitch/</link>
+      <pubDate>Fri, 24 Jul 2026 11:46:30 +0530</pubDate>
+      <guid>https://avid-programmer.github.io/posts/opensnitch/</guid>
+      <description>&lt;p&gt;As I was reading about Nftables and eBPF, I thought struck in my mind that there are firewall rules to block/control incoming
+connections. You can install Gufw which is a graphical frontend to ufw. By clicking a button, you can deny all unauthorized
+incoming connections. Yes, you can control outgoing connections too but for that you have to create manual rules and it is
+not as easy as it sounds. Wouldn&amp;rsquo;t it be great if I can view each outgoing connection on connection to connection basis.
+As I was reading about eBPF and Linux network programming, so I knew that for each connection a socket is created and if I am
+able to hook into kernel functions responsible for socket creation I would be able to intercept and see every outbound connection.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://avid-programmer.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://avid-programmer.github.io/about/</guid>
+      <description>&lt;p&gt;My name is Rupesh Narayan, a BTech CSE graduate and am deeply interested in low level systems.
+I will be publishing weekly blogs on my learnings and findings while studying low level systems.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
